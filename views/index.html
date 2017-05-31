@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>WELCOME</title>
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="/js/login.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <main>
+  <h1>Unconventional Trip</h1>
+    <div class="form-style">
+      <h2>Login to your account</h2>
+      <form action="/users/login" method="POST">
+        <input id="email" type="text" name="email" placeholder="E-mail">
+        <input id="password" type="password" name="password" placeholder="Password">
+        <input type="submit" value="Login">
+      </form>
+      <p>Don't have an account yet?</p>
+      <a href="/users/new">Sign up!</a>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <link rel="stylesheet" href="/css/index.css">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmZUgu0IoJ3_fCRho5cnYkyM09Xyd3738&libraries=geometry,places">
+  </script>
+  <!-- AIzaSyBmZUgu0IoJ3_fCRho5cnYkyM09Xyd3738 -->
+  <!-- <script type="text/javascript" src="/js/index.js"></script> -->
+
+  <script type="text/javascript" src="/js/search-city-country.js"></script><!-- AIzaSyCMgtWWlh_lYIzrBcl5XFelkfo3Sd_jTrY -->
+</head>
+<body>
+
+  <h1>Unconventional Trip</h1>
+
+  {{ # data }}
+  <section class="nav">
+      <a id="profile" href="/users/{{ id }}">Home</a>
+      <a id="search" href="/users/{{ id }}/search">Search</a>
+      <a id="lists" href="/lists/{{ id }}">Trips</a>
+      <a id="bloggers" href="/tips/{{ id }}">Tips</a>
+      <a href="/users/logout">Logout</a>
+  </section>
+  {{ / data }}
+
+  <main>
+   <table>
+    <tr>
+      <td>
+          <select id="country">
+            <option value="all">All</option>
+            <option value="au">Australia</option>
+            <option value="br" selected>Brazil</option>
+            <option value="ca">Canada</option>
+            <option value="fr">France</option>
+            <option value="de">Germany</option>
+            <option value="mx">Mexico</option>
+            <option value="nz">New Zealand</option>
+            <option value="it">Italy</option>
+            <option value="za">South Africa</option>
+            <option value="es">Spain</option>
+            <option value="pt">Portugal</option>
+            <option value="us">U.S.A.</option>
+            <option value="uk">United Kingdom</option>
+          </select>
+      </td>
+      <td>
+        <input id="autocomplete" placeholder="Enter a city" type="text" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <select id="type">
+            <option value="amusement_park">Amusement Park</option>
+            <option value="restaurant">Restaurant</option>
+            <option value="museum">Museum</option>
+            <option value="aquarium">Aquarium</option>
+            <option value="bakery">Bakery</option>
+            <option value="art_gallery">Art Gallery</option>
+            <option value="bar">Bar</option>
+            <option value="beauty_salon">Beauty Salon</option>
+            <option value="book_store">Book Store</option>
+            <option value="cafe">Cafe</option>
+            <option value="casino">Casino</option>
+            <option value="cemetery">Cemetery</option>
+            <option value="church">Church</option>
+            <option value="clothing_store">Clothing Store</option>
+            <option value="convenience_store">Convenience Store</option>
+          </select>
+      </td>
+      <td>
+        <input id="searchlist" placeholder="Enter a keyword" >
+      </td>
+    </tr>
+  </table>
+
+  <div class="search">
+    <input id="fetch-call" type="submit" value="Search" />
+  </div>
+
+  <div class="container">
+
+    <div id="map" class="results"></div>
+
+    <div id="listing">
+      <p class="city" id="city"> <span id="city-complement"></span></p>
+      <div id="save-item">
+        <table>
+          <tr>
+            <td>
+              <p class="city">Select a list:
+                <select id="my-list" form="searchform"></select>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input id="create-list" value="Create a new list" type="button"/>
+            </td>
+          </tr>
+          <tr id="hidden-create-list" style="display: none">
+            <td>
+              <input id="list" type="text" >
+              <input id="add-new-list" value="Add" type="button">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table id="resultsTable">
+        <div id="show-results" style="display: block">
+          <p>No results found</p>
+        </div>
+        <tbody id="results"></tbody>
+      </table>
+    </div>
+
+    <div style="display: none">
+      <div id="info-content">
+        <table>
+          <tr id="iw-url-row" class="iw_table_row">
+            <td id="iw-icon" class="iw_table_icon"></td>
+            <td id="iw-url"></td>
+          </tr>
+          <tr id="iw-address-row" class="iw_table_row">
+            <td class="iw_attribute_name">Address:</td>
+            <td id="iw-address"></td>
+          </tr>
+          <tr id="iw-phone-row" class="iw_table_row">
+            <td class="iw_attribute_name">Telephone:</td>
+            <td id="iw-phone"></td>
+          </tr>
+          <tr id="iw-rating-row" class="iw_table_row">
+            <td class="iw_attribute_name">Rating:</td>
+            <td id="iw-rating"></td>
+          </tr>
+          <tr id="iw-website-row" class="iw_table_row">
+            <td class="iw_attribute_name">Website:</td>
+            <td id="iw-website"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+ <!--      <div id="suggestions" class="results">
+        <h1>Suggestions</h1>
+      </div> -->
+
+  </main>
+</body>
+</html>

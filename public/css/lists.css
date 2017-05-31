@@ -1,0 +1,115 @@
+#map {
+  width: 70%;
+  height: 50%;
+  border: 1px solid #000;
+  margin: 5% auto;
+}
+
+  html, body {
+    height: 100%;
+    margin: 2% auto;
+    padding: 0;
+    font-size: 24px;
+    background-color: #151618;
+    color: white;
+    font-family: 'Baloo', cursive;
+    text-align: center;
+  }
+
+h1 {
+  margin-top: 5%;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+.nav a{
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: white;
+  text-decoration: none;
+  padding: 5%;
+}
+
+.container {
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 65%;
+  margin: 0 auto;
+}
+
+form {
+  margin-bottom: 5%;
+}
+
+.flex a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.list{
+  display: inline-block;
+  border: 1px solid white;
+  margin: 1%;
+  padding: 2%;
+}
+
+input[type="button"],
+button[type="reset"],
+input[type="submit"] {
+  -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+  box-shadow: inset 0px 1px 0px 0px #45D6D6;
+  background-color: #2CBBBB;
+  border: 1px solid #27A0A0;
+  display: inline-block;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 14px;
+  padding: 8px 18px;
+  /*text-decoration: none;*/
+  text-transform: uppercase;
+}
+
+input[type="text"] {
+  font-size: 14px;
+  padding: 8px 18px;
+}
+
+label {
+  padding: 8px 18px;
+}
+
+button[type="submit"] {
+  -moz-box-shadow: inset 0px 1px 0px 0px #980404;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #980404;
+  box-shadow: inset 0px 1px 0px 0px ##980404;
+  background-color: #980404;
+  border: 1px solid #710303;
+  display: inline-block;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 14px;
+  padding: 8px 18px;
+  /*text-decoration: none;*/
+  text-transform: uppercase;
+}
+
+table {
+  margin: 5% auto;
+  width: 65%;
+}
+td {
+  margin: 5%;
+  padding: 1%;
+}

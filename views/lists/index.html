@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/lists.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="/js/lists.js"></script>
+
+</head>
+<body id="list-index">
+  <h1>Unconventional Trip</h1>
+
+  <section class="nav">
+    <a id="profile" href="#">Home</a>
+    <a id="search" href="#">Search</a>
+    <a id="lists" href="#">Trips</a>
+    <a id="tips" href="#">Tips</a>
+    <a href="/users/logout">Logout</a>
+  </section>
+
+  <div class="container">
+      <form>
+        <label>Create a new list: </label>
+        <input id="list" type="text" >
+        <input id="new-list" value="Add" type="button">
+      </form>
+      <div class="flex">
+        {{ # data }}
+          <div class="list" id="{{list_id}}">
+            <a href="/lists/{{user_id}}/list/{{list_id}}"><span>{{ list_name }}</span></a>
+            <br>
+            <br>
+            <button type="reset">Rename</button>
+            <input class="share-list" type="button" value="Share">
+            <button class="delete-list" type="submit">Delete</button>
+          </div>
+        {{ / data }}
+      </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/lists.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMgtWWlh_lYIzrBcl5XFelkfo3Sd_jTrY&libraries=geometry,places">
+  </script>
+  <script type="text/javascript" src="/js/lists.js"></script>
+  <script type="text/javascript" src="/js/maps.js"></script>
+</head>
+<body>
+  <h1>Unconventional Trip</h1>
+
+  <section class="nav">
+    <a id="profile" href="#">Home</a>
+    <a id="search" href="#">Search</a>
+    <a id="lists" href="#">Trips</a>
+    <a id="tips" href="#">Tips</a>
+    <a href="/users/logout">Logout</a>
+  </section>
+
+  <table>
+    <div id="sortable1" class="connectedSortable">
+      {{ # data }}
+      <!-- <div class="place ui-state-default"> -->
+        <tr>
+          <td><input class={{ checked }} type="checkbox"></td>
+          <td><label id={{ google_place_id }}>{{ name }} {{ rating }}</label></td>
+          <td id={{ place_id }} ><button class="delete-item" type="submit">Delete</button></td>
+        </tr>
+      <!-- </div> -->
+      {{ / data }}
+    </div>
+  </table>
+  <div id="map"></div>
+
+</body>
+</html>

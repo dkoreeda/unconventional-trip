@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <main>
+    <a id="logout" href="/users/logout">Logout</a>
+
+    <h1>Unconventional Trip</h1>
+    <!-- <p>Welcome to your profile, {{user.email}}</p> -->
+
+    <div class="container">
+      <div class="flex">
+          <div class="icons box">
+            <a href="/users/{{user.id}}/search">
+              <img src="/css/img/maglass.png" alt="magnified glass" class="image" >
+              <div class="middle">
+                <div class="text">Search</div>
+              </div>
+            </a>
+          </div>
+          <div class="instructions">
+            <h3>Step One</h3>
+            <ul>
+              <li>Select a country</li>
+              <li>Select a city</li>
+              <li>Select an activity</li>
+              <li>Save place in your list</li>
+            </ul>
+          </div>
+      </div>
+      <div class="flex">
+          <div class="icons box">
+            <a href="/lists/{{user.id}}">
+              <img src="/css/img/map.png" alt="map" class="image">
+              <div class="middle">
+                <div class="text">Trips</div>
+              </div>
+            </a>
+          </div>
+          <div class="instructions">
+            <h3>Step Two</h3>
+            <p>Visit your saved trips</p>
+          </div>
+      </div>
+      <div class="flex">
+          <div class="icons box">
+            <a href="/lists/{{user.id}}">
+              <img src="/css/img/mala.png" alt="map" class="image">
+              <div class="middle">
+                <div class="text">Tips</div>
+              </div>
+            </a>
+          </div>
+          <div class="instructions">
+            <h3>Step Three</h3>
+            <p>Share your trips</p>
+          </div>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>

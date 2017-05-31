@@ -1,0 +1,229 @@
+#map {
+  width: 100%;
+  height: 50%;
+  border: 1px solid #000;
+  margin: 2% 0;
+}
+
+  html, body {
+    height: 100%;
+    margin: 2%;
+    padding: 0;
+    font-size: 24px;
+    background-color: #151618;
+    color: white;
+    font-family: 'Baloo', cursive;
+  }
+
+#logout {
+  margin: 5%;
+  right: 5%;
+  font-size: 0.8em;
+  font-family: 'Open Sans Condensed', arial, sans;
+  text-decoration: none;
+  color: #fff;
+  padding: 1%;
+  border: 1px solid #fff;
+}
+
+h1 {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+p {
+  text-align: center;
+  font-size: 0.8em;
+  color: #797979;
+  letter-spacing: 1px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-style{
+  text-align: center;
+  font-family: 'Open Sans Condensed', arial, sans;
+  width: 500px;
+  padding: 30px;
+  background: #FFFFFF;
+  margin: 50px auto;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+}
+.form-style h2{
+  text-align: center;
+  letter-spacing: 1px;
+  background: #4D4D4D;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #797979;
+  font-size: 18px;
+  font-weight: 100;
+  padding: 20px;
+  margin: -30px -30px 30px -30px;
+}
+
+.form-style a {
+  -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+  box-shadow: inset 0px 1px 0px 0px #45D6D6;
+  background-color: #2CBBBB;
+  border: 1px solid #27A0A0;
+  display: inline-block;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 14px;
+  padding: 8px 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.form-style input[type="text"],
+.form-style input[type="password"],
+.form-style input[type="button"]
+{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+  margin-bottom: 10px;
+  font: 16px Arial, Helvetica, sans-serif;
+  height: 45px;
+  text-align: center;
+}
+
+.form-style input[type="submit"]{
+    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    background-color: #2CBBBB;
+    border: 1px solid #27A0A0;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.form-style input[type="submit"]:hover {
+    background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+    background-color:#34CACA;
+}
+
+.showMap {
+  display: block;
+}
+
+.hiddenMap {
+  display: none;
+}
+
+.results-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.results {
+  width: 50%;
+  height: 50%;
+  border: 1px solid #000;
+  margin: 2% 0;
+}
+
+.search-results {
+  overflow: scroll;
+}
+
+.flex {
+  width: 30%;
+}
+
+.instructions {
+  border: 1px dashed #fff;
+  height: 265px;
+  width: 100%;
+  margin-top: 13%;
+  padding: 10% 0;
+}
+
+.instructions h3{
+  color: #27a0a0;
+  text-align: center;
+}
+
+.instructions ul{
+  color: white;
+  font-size: 0.8em;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.instructions p, li {
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: white;
+}
+
+.icons {
+  width: 75%;
+  height: auto;
+  padding: 2%;
+  margin: 0 auto;
+}
+
+.text {
+  color: white;
+  font-size: 2em;
+  padding: 16px 32px;
+  text-align: center;
+}
+
+.box {
+  position: relative;
+}
+
+.image {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.box:hover .middle {
+  opacity: 1;
+}
+
+.box:hover .image {
+  opacity: 0.3;
+}
+
