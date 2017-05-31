@@ -16,10 +16,10 @@ $(document).ready(() => {
   }
 
   console.log(userId);
-  $('#profile').attr("href", `http://localhost:3000/users/${userId}`);
-  $('#search').attr("href", `http://localhost:3000/users/${userId}/search`);
-  $('#lists').attr("href", `http://localhost:3000/lists/${userId}`);
-  $('#tips').attr("href", `http://localhost:3000/tips/${userId}`);
+  $('#profile').attr("href", `https://unconventionaltrip.herokuapp.com/users/${userId}`);
+  $('#search').attr("href", `https://unconventionaltrip.herokuapp.com/users/${userId}/search`);
+  $('#lists').attr("href", `https://unconventionaltrip.herokuapp.com/lists/${userId}`);
+  $('#tips').attr("href", `https://unconventionaltrip.herokuapp.com/tips/${userId}`);
 
   $('#new-list').on('click', (e) => {
     const newList = $('#list').val();

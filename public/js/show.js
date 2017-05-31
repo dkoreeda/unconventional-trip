@@ -12,7 +12,7 @@ let userId;
   }
   console.log(userId);
 
-  $('#return').attr("href", `http://localhost:3000/users/${userId}`);
+  $('#return').attr("href", `https://unconventionaltrip.herokuapp.com/${userId}`);
 
   const deleteButton = document.querySelectorAll('.delete-item');
 

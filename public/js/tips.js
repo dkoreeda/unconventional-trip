@@ -14,10 +14,10 @@ $(document).ready(() => {
     userId = hash[3];
   }
 
-  $('#profile').attr("href", `http://localhost:3000/users/${userId}`);
-  $('#search').attr("href", `http://localhost:3000/users/${userId}/search`);
-  $('#lists').attr("href", `http://localhost:3000/lists/${userId}`);
-  $('#bloggers').attr("href", `http://localhost:3000/tips/${userId}`);
+  $('#profile').attr("href", `https://unconventionaltrip.herokuapp.com/users/${userId}`);
+  $('#search').attr("href", `https://unconventionaltrip.herokuapp.com/users/${userId}/search`);
+  $('#lists').attr("href", `https://unconventionaltrip.herokuapp.com/lists/${userId}`);
+  $('#bloggers').attr("href", `https://unconventionaltrip.herokuapp.com/tips/${userId}`);
 
   const initialize = (location) => {
     const latitude = location.coords.latitude;
