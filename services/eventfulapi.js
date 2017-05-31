@@ -12,14 +12,5 @@ Eventful.findByDate = (date)=> {
   })
 }
 
-// controller.show = (req, res) => {
-//   const date = req.params.date;
-//   Eventful
-//     .findById(id)
-//     .then((data) => {
-//       res.render('schedule/date',data);
-//     })
-//     .catch(err => console.log('ERROR:', err));
-// };
-
 module.exports = Eventful;
+

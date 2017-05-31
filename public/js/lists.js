@@ -15,6 +15,7 @@ $(document).ready(() => {
     userId = hash[3];
   }
 
+  console.log(userId);
   $('#profile').attr("href", `http://localhost:3000/users/${userId}`);
   $('#search').attr("href", `http://localhost:3000/users/${userId}/search`);
   $('#lists').attr("href", `http://localhost:3000/lists/${userId}`);
